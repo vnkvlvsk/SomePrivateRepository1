@@ -1,16 +1,13 @@
-//
-//  AppDelegate.swift
-//  SomePrivateProject1
-//
-//  Created by Kavaleuski Ivan on 23/01/2024.
-//
-
 import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+//    lazy var applicationCoordinator: AppCoordinator = {
+//        window = UIWindow(frame: UIScreen.main.bounds)
+//        let coordinator = AppCoordinator(window: window!, coordinatorFactory: AppCoordinatorFactory())
+//        return coordinator
+//    }()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
