@@ -2,6 +2,8 @@ import UIKit
 
 final class BucketListShowOrderButtonView: UIView {
     
+    // MARK: - Private properties
+    
     private let orderImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(systemName: "list.bullet.clipboard")
@@ -17,6 +19,8 @@ final class BucketListShowOrderButtonView: UIView {
         label.textColor = .black
         return label
     }()
+    
+    // MARK: - Lifecycle
         
     init() {
         super.init(frame: .zero)
@@ -26,6 +30,8 @@ final class BucketListShowOrderButtonView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    // MARK: - Private methods
     
     private func setupView() {
         layer.cornerRadius = 16

@@ -27,36 +27,50 @@ final class TabBarCoordinator: BaseCoordinator {
         
         let bucketItem = makeBucketItem(deepLinkOption: deepLinkOption)
         tabBarControllers.append(bucketItem)
+        
+        let accountSettingsItem = makeAccountSettingsItem(deepLinkOption: deepLinkOption)
+        tabBarControllers.append(accountSettingsItem)
 
         router.set(tabBarControllers)
     }
     
     // MARK: - Private methods
     
-    @discardableResult
     private func makeReviewItem(deepLinkOption: DeepLinkOption? = nil) -> TabBarItem {
-        let rootController = UINavigationController()
+        let rootController = BaseNavigationController()
 
         let (coordinator, router) = coordinatorsFactory.makeReviewCoordinatorBox(rootController: rootController)
         addDependency(coordinator)
         coordinator.start(deepLinkOption: deepLinkOption)
 
         #warning("change image")
-        let tabBarItem = TabBarItem(presentable: router, tabBarItemTitle: "Review", image: UIImage(systemName: "doc.text.magnifyingglass")!, tag: 3)
+        let tabBarItem = TabBarItem(presentable: router, tabBarItemTitle: "Review", image: UIImage(systemName: "doc.text.magnifyingglass")!, tag: 1)
 
         return tabBarItem
     }
     
-    @discardableResult
     private func makeBucketItem(deepLinkOption: DeepLinkOption? = nil) -> TabBarItem {
-        let rootController = UINavigationController()
+        let rootController = BaseNavigationController()
 
         let (coordinator, router) = coordinatorsFactory.makeBucketCoordinatorBox(rootController: rootController)
         addDependency(coordinator)
         coordinator.start(deepLinkOption: deepLinkOption)
 
         #warning("change image")
-        let tabBarItem = TabBarItem(presentable: router, tabBarItemTitle: "Bucket", image: UIImage(systemName: "cart")!, tag: 4)
+        let tabBarItem = TabBarItem(presentable: router, tabBarItemTitle: "Bucket", image: UIImage(systemName: "cart")!, tag: 2)
+        
+        return tabBarItem
+    }
+    
+    private func makeAccountSettingsItem(deepLinkOption: DeepLinkOption? = nil) -> TabBarItem {
+        let rootController = BaseNavigationController()
+
+        let (coordinator, router) = coordinatorsFactory.makeAccountSettingsCoordinatorBox(rootController: rootController)
+        addDependency(coordinator)
+        coordinator.start(deepLinkOption: deepLinkOption)
+
+        #warning("change image")
+        let tabBarItem = TabBarItem(presentable: router, tabBarItemTitle: "Account", image: UIImage(systemName: "person")!, tag: 3)
         
         return tabBarItem
     }

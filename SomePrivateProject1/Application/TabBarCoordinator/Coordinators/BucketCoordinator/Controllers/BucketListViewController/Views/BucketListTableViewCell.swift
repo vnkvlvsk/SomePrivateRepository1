@@ -19,9 +19,6 @@ final class BucketListTableViewCell: UITableViewCell {
         view.layer.borderWidth = 2
         view.layer.borderColor = UIColor.systemGray5.cgColor
         view.clipsToBounds = true
-        view.onTouchUpInside {
-            print("dsadas")
-        }
         return view
     }()
     

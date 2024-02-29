@@ -50,6 +50,12 @@
 		C803EC452B7AD8CA00290003 /* UIView+Touch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C803EC442B7AD8CA00290003 /* UIView+Touch.swift */; };
 		C8D381932B7B9C160045376D /* OrdersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D381922B7B9C160045376D /* OrdersListViewController.swift */; };
 		C8D381952B7B9C1E0045376D /* OrdersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D381942B7B9C1E0045376D /* OrdersListViewModel.swift */; };
+		C8D381BA2B88D2E80045376D /* AccountSettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D381B92B88D2E80045376D /* AccountSettingsCoordinator.swift */; };
+		C8D381BE2B88D3260045376D /* AccountSettingsCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D381BD2B88D3260045376D /* AccountSettingsCoordinatorFactory.swift */; };
+		C8D381C32B88D4C90045376D /* AccountSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D381C22B88D4C90045376D /* AccountSettingsViewController.swift */; };
+		C8D381C52B88D4D00045376D /* AccountSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D381C42B88D4D00045376D /* AccountSettingsViewModel.swift */; };
+		C8D381C72B88D5290045376D /* AccountSettingsTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D381C62B88D5290045376D /* AccountSettingsTitleView.swift */; };
+		C8D381CC2B88E30E0045376D /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D381CB2B88E30E0045376D /* BaseNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -99,6 +105,12 @@
 		C803EC442B7AD8CA00290003 /* UIView+Touch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Touch.swift"; sourceTree = "<group>"; };
 		C8D381922B7B9C160045376D /* OrdersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersListViewController.swift; sourceTree = "<group>"; };
 		C8D381942B7B9C1E0045376D /* OrdersListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersListViewModel.swift; sourceTree = "<group>"; };
+		C8D381B92B88D2E80045376D /* AccountSettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettingsCoordinator.swift; sourceTree = "<group>"; };
+		C8D381BD2B88D3260045376D /* AccountSettingsCoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettingsCoordinatorFactory.swift; sourceTree = "<group>"; };
+		C8D381C22B88D4C90045376D /* AccountSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettingsViewController.swift; sourceTree = "<group>"; };
+		C8D381C42B88D4D00045376D /* AccountSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettingsViewModel.swift; sourceTree = "<group>"; };
+		C8D381C62B88D5290045376D /* AccountSettingsTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettingsTitleView.swift; sourceTree = "<group>"; };
+		C8D381CB2B88E30E0045376D /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		C996767CCB6CD45CDB7E72F1 /* Pods_SomePrivateProject1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SomePrivateProject1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -391,6 +403,7 @@
 				C803EC182B71216100290003 /* BaseTextFieldView */,
 				C803EC152B7120AB00290003 /* BaseTextField */,
 				C803EC0D2B6D894800290003 /* BaseViewController */,
+				C8D381CA2B88E2FF0045376D /* BaseNavigationController */,
 			);
 			path = BaseComponents;
 			sourceTree = "<group>";
@@ -498,6 +511,7 @@
 			children = (
 				C803EBFE2B6D869E00290003 /* ReviewCoordinator */,
 				C803EC2E2B77FD1A00290003 /* BucketCoordinator */,
+				C8D381B82B88D2BF0045376D /* AccountSettingsCoordinator */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -517,6 +531,58 @@
 			children = (
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		C8D381B82B88D2BF0045376D /* AccountSettingsCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				C8D381B92B88D2E80045376D /* AccountSettingsCoordinator.swift */,
+				C8D381BB2B88D30B0045376D /* Factories */,
+				C8D381BF2B88D4AA0045376D /* Controllers */,
+			);
+			path = AccountSettingsCoordinator;
+			sourceTree = "<group>";
+		};
+		C8D381BB2B88D30B0045376D /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				C8D381BD2B88D3260045376D /* AccountSettingsCoordinatorFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		C8D381BF2B88D4AA0045376D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C8D381C02B88D4B20045376D /* AccountSettingsViewController */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C8D381C02B88D4B20045376D /* AccountSettingsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C8D381C12B88D4C20045376D /* Views */,
+				C8D381C42B88D4D00045376D /* AccountSettingsViewModel.swift */,
+				C8D381C22B88D4C90045376D /* AccountSettingsViewController.swift */,
+			);
+			path = AccountSettingsViewController;
+			sourceTree = "<group>";
+		};
+		C8D381C12B88D4C20045376D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C8D381C62B88D5290045376D /* AccountSettingsTitleView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C8D381CA2B88E2FF0045376D /* BaseNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				C8D381CB2B88E30E0045376D /* BaseNavigationController.swift */,
+			);
+			path = BaseNavigationController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -634,14 +700,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				C803EC1C2B7134EB00290003 /* BaseTextFieldActionView.swift in Sources */,
+				C8D381BA2B88D2E80045376D /* AccountSettingsCoordinator.swift in Sources */,
 				C803EA8F2B5FAFC400290003 /* Coordinator.swift in Sources */,
 				C803EA912B5FB00D00290003 /* DeepLinkOption.swift in Sources */,
 				C803EA932B5FB16000290003 /* AppCoordinator.swift in Sources */,
 				C803EA852B5FAEAB00290003 /* TabBarRouterProtocol.swift in Sources */,
 				C803EC3E2B7806AF00290003 /* BucketListEmptyHeaderView.swift in Sources */,
+				C8D381C72B88D5290045376D /* AccountSettingsTitleView.swift in Sources */,
 				C803EC2B2B72E8A000290003 /* CategoriesListEmptyCollectionReusableView.swift in Sources */,
 				C803EC402B7AC05B00290003 /* BucketModel.swift in Sources */,
 				C803EC0F2B6D895500290003 /* BaseViewController.swift in Sources */,
+				C8D381BE2B88D3260045376D /* AccountSettingsCoordinatorFactory.swift in Sources */,
 				C803EC092B6D882900290003 /* CategoriesListViewController.swift in Sources */,
 				C803EC132B6D8CA500290003 /* UIViewController+Presentable.swift in Sources */,
 				C803EBF62B6D831500290003 /* TabBarItem.swift in Sources */,
@@ -658,6 +727,7 @@
 				C803EA8B2B5FAF8100290003 /* TabBarCoordinator.swift in Sources */,
 				C803EBFD2B6D85D800290003 /* RouterProtocol.swift in Sources */,
 				C803EA602B5FAA1600290003 /* AppDelegate.swift in Sources */,
+				C8D381C52B88D4D00045376D /* AccountSettingsViewModel.swift in Sources */,
 				C803EA8D2B5FAFA800290003 /* BaseCoordinator.swift in Sources */,
 				C803EC3C2B77FF6800290003 /* BucketListShowOrderButtonView.swift in Sources */,
 				C803EC1E2B713BBF00290003 /* UIViewController+Keyboard.swift in Sources */,
@@ -667,11 +737,13 @@
 				C8D381932B7B9C160045376D /* OrdersListViewController.swift in Sources */,
 				C803EC272B72D1E200290003 /* FoodCategoryModel.swift in Sources */,
 				C803EA7F2B5FADF000290003 /* AppCoordinatorFactory.swift in Sources */,
+				C8D381CC2B88E30E0045376D /* BaseNavigationController.swift in Sources */,
 				C803EBFB2B6D85B500290003 /* Router.swift in Sources */,
 				C8D381952B7B9C1E0045376D /* OrdersListViewModel.swift in Sources */,
 				C803EC3A2B77FDB900290003 /* BucketListViewModel.swift in Sources */,
 				C803EC202B72CC5B00290003 /* CategoriesListCategoryCollectionViewCell.swift in Sources */,
 				C803EC232B72CF0700290003 /* NetworkService.swift in Sources */,
+				C8D381C32B88D4C90045376D /* AccountSettingsViewController.swift in Sources */,
 				C803EC042B6D870A00290003 /* ReviewCoordinatorsFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -14,4 +14,10 @@ final class TabBarCoordinatorsFactory {
         let coordinator = BucketCoordinator(router: router)
         return (coordinator, router)
     }
+    
+    func makeAccountSettingsCoordinatorBox(rootController: UINavigationController) -> (AccountSettingsCoordinator, Presentable) {
+        let router = Router(rootController: rootController)
+        let coordinator = AccountSettingsCoordinator(router: router)
+        return (coordinator, router)
+    }
 }

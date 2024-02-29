@@ -39,6 +39,6 @@ final class ReviewCoordinator: BaseCoordinator {
             print("onCategoryPressed")
         }
         
-        router.push(categoriesListViewController, hideBottomBar: false)
+        router.setRootController(categoriesListViewController)
     }
 }
